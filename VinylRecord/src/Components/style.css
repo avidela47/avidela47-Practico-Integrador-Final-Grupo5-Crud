@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap");
+
+.liginPage {
+    background-image: url('https://masdecibelios.es/wp-content/uploads/2023/09/tiendadiscos-jpg-1200x620.webp');
+    background: linear-gradient(rgba(11, 11, 11, 0.5), rgba(10, 10, 10, 0.5)), url('https://masdecibelios.es/wp-content/uploads/2023/09/tiendadiscos-jpg-1200x620.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 120%;
+    color: white;
+}
+
+.loginForm {
+    background-color: transparent;
+    color: white;
+}
+
+.form-control::-webkit-input-placeholder {
+        color: white;
+}
+.form-control::-moz-placeholder {
+    color: white;
+}
+#htmlFor-ms:-input-placeholder {
+    color: white;
+}
+.form-control:-moz-placeholder {
+    color: white;
+}
+
+.col-auto {
+    background-image: url('https://img.freepik.com/fotos-premium/fondo-muchos-discos-vinilo-antiguos-ai-generativa_77190-13512.jpg');
+    background-attachment:fixed;
+    background-size:100% 100%;
+}
+
+.img_port {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.copy {
+    font-size: 11px;
+    text-align: center;
+}
+
+body {
+    font-family: 'Neuton', serif;
+}
+
+.card {
+    margin-left: 400px;
+    margin-top: 50px;
+}
+
+:root {
+    --background: #e0e5ec;
+    --gray: #797d7f;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .container-fluid2 {
+    background-image: url('https://masdecibelios.es/wp-content/uploads/2023/09/tiendadiscos-jpg-1200x620.webp');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-position: center;
+    background-repeat:inherit
+  }
+  
+  .player {
+    width: 300px;
+    height: 550px;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
+      -9px -9px 16px rgba(255, 255, 255, 0.5);
+  }
+  
+  .player__controls {
+    display: flex;
+    width: 95%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  
+  .player__btn {
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -8px -8px 20px 0px #fff9, -6px -6px 6px 0px #fff9,
+      8px 8px 20px #0001, 5px 5px 6px 0px #0001;
+    color: var(--gray);
+  }
+  
+  .player__btn:active {
+    box-shadow: inset -8px -8px 20px #fff9, inset -5px -5px 6px #fff9,
+      inset 8px 8px 20px #0003, inset 5px 5px 6px #0001;
+  }
+  
+  .player__btn--small {
+    min-width: 50px;
+    min-height: 50px;
+  }
+  
+  .player__title {
+    font-weight: 600;
+    font-size: 0.8em;
+    color: #a1a1a1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+  }
+  
+  .player__album {
+    width: 150px;
+  }
+  
+  .player__img {
+    border-radius: 50%;
+    box-shadow: 2px 2px 7px rgb(163, 177, 198), -2px -2px 7px rgb(163, 177, 198),
+      -8px -8px 50px rgba(255, 255, 255, 0.8), 3px 3px 25px rgba(0, 0, 0, 0.6);
+  }
+  
+  .player__artist {
+    font-size: 1.2em;
+    font-weight: 500;
+    opacity: 0.5;
+    margin: 20px 0px 0px 0px;
+  }
+  
+  .player__song {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1em;
+    opacity: 0.5;
+    margin: 0;
+  }
+  
+  .player__level {
+    width: 80%;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin-top: 40px;
+  }
+  
+  .player__level::-webkit-slider-runnable-track {
+    background-color: #d7dbdd;
+    height: 6px;
+    border-radius: 3px;
+  }
+  
+  .player__level::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 100%;
+    background-color: #5c87fe;
+    height: 18px;
+    width: 18px;
+    margin-top: -7px;
+  }
+  
+  .audio-duration {
+    margin-top: -30px;
+    display: flex;
+    width: 78%;
+    font-size: 10px;
+    font-weight: 600;
+    color: #a1a1a1;
+    letter-spacing: 1px;
+  }
+  
+  .start {
+    flex: 1;
+  }
+  
+  .player__audio {
+    visibility: hidden;
+  }
+  
+  .player__btn--medium {
+    min-height: 70px;
+    min-width: 70px;
+  }
+  
+  .blue {
+    background-color: #5c87fe;
+    color: #fff;
+  }
+  
+  .hide {
+    display: none;
+  }
+
+  .card2 {
+    margin: 35px;
+    margin-top: -11px;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.card-img-top {
+  border-radius: 50%;
+}
+
+.card-body2 {
+  text-align: center;
+}
+
+.h1t {
+  text-align: center;
+}
+
+.strong2 {
+  font-size: 1.5rem;
+}
+
+.btne {
+  margin-left: -100px;
+}
+
+.colfoto {
+  margin: 50px;
+  margin-bottom: 10px;
+}
