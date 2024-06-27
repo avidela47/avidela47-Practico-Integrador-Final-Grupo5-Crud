@@ -15,10 +15,10 @@ const __dirname = path.dirname(__filename);
 
 // Setting
 const app = express();
-app.use(cookieParser());
 dotenv.config();
 const PORT = process.env.PORT || 8080;
 const publicRoot = path.join(__dirname, "uploads");
+app.use(cookieParser());
 
 // Middlewares
 app.use(
