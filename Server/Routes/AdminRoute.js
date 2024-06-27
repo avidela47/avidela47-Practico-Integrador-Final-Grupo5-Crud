@@ -40,7 +40,7 @@ router.post("/adminlogin", (req, res) => {
       const email = data[0].email;
       const token = jwt.sign(
         { role: "admin", email: email, id: data[0].id },
-        "avupk5775",
+        "jwt_secret_key",
         {
           expiresIn: "1d",
         }

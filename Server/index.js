@@ -20,8 +20,8 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "https://vinyl-record-mlvialmg4-avidela47s-projects.vercel.app",
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: "https://vinyl-record.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   })
 );
@@ -39,7 +39,7 @@ app.use("/employee", employeeRouter);
 const verifyUser = (req, res, next) => {
   const token = req.cookies.token;
   if (token) {
-    Jwt.verify(token, "avupk5775", (err, decoded) => {
+    Jwt.verify(token, "jwt_secret_key", (err, decoded) => {
       if (err) return res.json({ Status: false, Error: "Token equivocado" });
       req.id = decoded.id;
       req.role = decoded.role;
