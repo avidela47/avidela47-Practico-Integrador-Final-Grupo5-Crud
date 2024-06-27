@@ -17,8 +17,6 @@ dotenv.config();
 const PORT = process.env.PORT || 8080;
 
 app.use(cookieParser());
-app.options('*', cors());
-
 
 app.use(
   cors({
