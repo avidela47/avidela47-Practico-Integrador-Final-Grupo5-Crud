@@ -20,7 +20,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "https://vinyl-record.vercel.app",
+    origin: "https://viny-record-api.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   })
