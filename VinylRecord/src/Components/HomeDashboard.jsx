@@ -61,7 +61,7 @@ const HomeDashboard = () => {
 
   const generoCount = async () => {
     try {
-      const response = await axios.get("https://viny-record-api.vercel.app/auth/genero_count");
+      const response = await axios.get("https://viny-record-api.vercel.app/genero_count");
       if (response.data.Status) {
         setGeneroTotal(response.data.Result[0].category_total);
       } else {
