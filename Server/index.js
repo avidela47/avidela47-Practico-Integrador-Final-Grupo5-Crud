@@ -23,7 +23,7 @@ const publicRoot = path.join(__dirname, "uploads");
 // Middlewares
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: ["https://vinyl-record.vercel.app/"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
