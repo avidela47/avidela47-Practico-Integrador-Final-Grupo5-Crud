@@ -5,7 +5,7 @@
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "https://vinyl-record.vercel.app"
+          "value": "https://vinyl-record-mlvialmg4-avidela47s-projects.vercel.app/"
         },
         {
           "key": "Access-Control-Allow-Methods",
