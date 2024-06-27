@@ -3,39 +3,38 @@ import cors from "cors";
 import * as dotenv from "dotenv";
 import colors from "colors";
 import path from "path";
-import { fileURLToPath } from "url";
-import { adminRouter } from "./Routes/AdminRoute.js";
+import { fileURLToPath } from "url"; // Importa fileURLToPath
+import { adminRouter } from "./Routes/AdminRoute.js"; // Ajusta la ruta si es necesario
 import { employeeRouter } from "./Routes/EmployeeRoute.js";
 import Jwt from "jsonwebtoken";
 import cookieParser from "cookie-parser";
 
+// Definir __dirname manualmente
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Setting
 const app = express();
+app.use(cookieParser());
 dotenv.config();
 const PORT = process.env.PORT || 8080;
+const publicRoot = path.join(__dirname, "uploads");
 
-app.use(cookieParser());
-
+// Middlewares
 app.use(
   cors({
-    origin: "http://localhost:8080",
+    origin: ["http://localhost:5173"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use("/uploads", express.static(publicRoot)); // Configurar la ruta estática correctamente
 
-const publicRoot = path.join(__dirname, "uploads");
-app.use("/uploads", express.static(publicRoot));
-
-// Verificar rutas y middlewares
+// Routes
 app.use("/auth", adminRouter);
 app.use("/employee", employeeRouter);
-
 const verifyUser = (req, res, next) => {
   const token = req.cookies.token;
   if (token) {
@@ -49,14 +48,15 @@ const verifyUser = (req, res, next) => {
     return res.json({ Status: false, Error: "No Autenticado" });
   }
 };
-
-// Asegúrate de que esta ruta está después del middleware de verificación
 app.get("/verify", verifyUser, (req, res) => {
   return res.json({ Status: true, role: req.role, id: req.id });
 });
 
+// Server
 const httpServer = app.listen(PORT, async () => {
-  console.log(`Server corriendo en modo ${process.env.DEV_MODE} en puerto ${PORT}`.bgMagenta.white);
+  console.log(
+    `Server corriendo en modo ${process.env.DEV_MODE} en puerto ${PORT}`
+      .bgMagenta.white
+  );
 });
-
 httpServer.on("error", (error) => console.log(`Error: ${error}`.bgRed.white));
