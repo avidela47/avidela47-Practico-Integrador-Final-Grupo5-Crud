@@ -17,6 +17,8 @@ dotenv.config();
 const PORT = process.env.PORT || 8080;
 
 app.use(cookieParser());
+app.options('*', cors()); // Maneja la solicitud previa en todas las rutas
+
 
 app.use(
   cors({
