@@ -45,7 +45,7 @@ router.post("/employee_login", (req, res) => {
         const email = data[0].email;
         const token = jwt.sign(
           { role: "employee", email: email, id: data[0].id },
-          "jwt_secret_key",
+          "avupk5775",
           {
             expiresIn: "1d",
           }

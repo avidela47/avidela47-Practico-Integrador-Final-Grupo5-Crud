@@ -39,7 +39,7 @@ app.use("/employee", employeeRouter);
 const verifyUser = (req, res, next) => {
   const token = req.cookies.token;
   if (token) {
-    Jwt.verify(token, "jwt_secret_key", (err, decoded) => {
+    Jwt.verify(token, "avupk5775", (err, decoded) => {
       if (err) return res.json({ Status: false, Error: "Token equivocado" });
       req.id = decoded.id;
       req.role = decoded.role;
