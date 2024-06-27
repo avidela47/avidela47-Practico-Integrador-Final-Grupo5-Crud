@@ -40,7 +40,7 @@ password: "avidela",
 database: "vinyl_record",
 
 ### Correr la aplicación en 'servidor on-line'
-https://vinylrecordok.000webhostapp.com/
+No hay hosting gratuitos para realizar el deploy de app con frontend, backend y base de datos, para poder desplegar la misma hay que clonar el repositorio y ejecutarlo localmente.
 
 ### Skill
 NODE JS -
