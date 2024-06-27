@@ -17,12 +17,12 @@ dotenv.config();
 const PORT = process.env.PORT || 8080;
 
 app.use(cookieParser());
-app.options('*', cors()); // Maneja la solicitud previa en todas las rutas
+app.options('*', cors());
 
 
 app.use(
   cors({
-    origin: "https://viny-record-api.vercel.app",
+    origin: "http://localhost:8080",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   })

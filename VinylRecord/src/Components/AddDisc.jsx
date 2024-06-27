@@ -17,7 +17,7 @@ const AddDisc = () => {
 
   useEffect(() => {
     axios
-      .get("https://viny-record-api.vercel.app/auth/category")
+      .get("http://localhost:8080/auth/category")
       .then((res) => {
         if (res.data.Status) {
           setCategory(res.data.Result);
@@ -42,7 +42,7 @@ const AddDisc = () => {
     formData.append("image", discos.image);
 
     axios
-      .post("https://viny-record-api.vercel.app/auth/add_disc", formData)
+      .post("http://localhost:8080/auth/add_disc", formData)
       .then((res) => {
         if (res.data.Status) {
           navigate("/dashboard/disc");

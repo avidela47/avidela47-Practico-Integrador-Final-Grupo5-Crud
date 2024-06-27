@@ -18,7 +18,7 @@ const EditDisc = () => {
 
   useEffect(() => {
     axios
-      .get("https://viny-record-api.vercel.app/auth/category")
+      .get("http://localhost:8080/auth/category")
       .then((res) => {
         if (res.data.Status) {
           setCategory(res.data.Result);
@@ -31,7 +31,7 @@ const EditDisc = () => {
       });
 
     axios
-      .get(`https://viny-record-api.vercel.app/auth/disc/${id}`)
+      .get(`http://localhost:8080/auth/disc/${id}`)
       .then((res) => {
         if (res.data.Status) {
           const disc = res.data.Result[0];
@@ -62,7 +62,7 @@ const EditDisc = () => {
     formData.append("origin", discos.origin);
 
     axios
-      .put(`https://viny-record-api.vercel.app/auth/edit_disc/${id}`, formData)
+      .put(`http://localhost:8080/auth/edit_disc/${id}`, formData)
       .then((res) => {
         if (res.data.Status) {
           alert("Banda editada correctamente!!!");

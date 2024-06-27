@@ -20,7 +20,7 @@ const EmployeeLogin = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://viny-record-api.vercel.app/employee/employee_login", values)
+      .post("http://localhost:8080/employee/employee_login", values)
       .then((res) => {
         if (res.data.loginStatus) {
           localStorage.setItem("valid", true);
