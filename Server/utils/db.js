@@ -1,11 +1,14 @@
 import mysql from "mysql";
 import colors from "colors";
+import * as dotenv from "dotenv";
+
+dotenv.config();
 
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "avidela",
-  database: "vinyl_record",
+  host: process.env.DB_HOST || "localhost",
+  user: process.env.DB_USER || "root",
+  password: process.env.DB_PASSWORD || "avidela",
+  database: process.env.DB_NAME || "vinyl_record",
 });
 
 db.connect(function (err) {
