@@ -24,7 +24,7 @@ const publicRoot = path.join(__dirname, "uploads");
 app.use(
   cors({
     origin: ["https://vinyl-record-k767i5pur-avidela47s-projects.vercel.app"],
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   })
 );
