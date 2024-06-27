@@ -9,7 +9,7 @@ const Disc = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/auth/disc")
+      .get("https://viny-record-api.vercel.app/auth/disc")
       .then((res) => {
         if (res.data.Status) {
           setDiscos(res.data.Result);
@@ -24,7 +24,7 @@ const Disc = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:8080/auth/delete_disc/${id}`)
+      .delete(`https://viny-record-api.vercel.app/auth/delete_disc/${id}`)
       .then((res) => {
         if (res.data.Status) {
           setDiscos(discos.filter((item) => item.id !== id));
@@ -66,7 +66,7 @@ const Disc = () => {
                 <td>
                   <img
                     className="img_port"
-                    src={`http://localhost:8080/uploads/${item.image}`}
+                    src={`https://viny-record-api.vercel.app/uploads/${item.image}`}
                     alt="portada"
                   />
                 </td>

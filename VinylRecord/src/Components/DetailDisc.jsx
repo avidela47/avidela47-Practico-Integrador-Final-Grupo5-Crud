@@ -13,7 +13,7 @@ const DetailDisc = () => {
 
   const fetchDiscs = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/auth/disc");
+      const response = await axios.get("https://viny-record-api.vercel.app/auth/disc");
       if (response.data.Status) {
         setDiscs(response.data.Result);
       } else {
@@ -30,7 +30,7 @@ const DetailDisc = () => {
 
   const handleLogout = () => {
     axios
-      .get("http://localhost:8080/employee/logout", { withCredentials: true })
+      .get("https://viny-record-api.vercel.app/employee/logout", { withCredentials: true })
       .then((response) => {
         if (response.data.Status) {
           localStorage.removeItem("valid");
@@ -51,7 +51,7 @@ const DetailDisc = () => {
           <div className="col-md-4" key={disc.id}>
             <div className="card2 mb-4">
               <img
-                src={`http://localhost:8080/uploads/${disc.image}`}
+                src={`https://viny-record-api.vercel.app/uploads/${disc.image}`}
                 className="card-img-top"
                 alt={disc.disco}
               />

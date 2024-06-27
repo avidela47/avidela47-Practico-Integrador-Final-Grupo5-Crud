@@ -8,7 +8,7 @@ const Dashboard = () => {
   axios.defaults.withCredentials = true;
   const handleLogout = () => {
     axios
-      .get("http://localhost:8080/auth/logout", { withCredentials: true })
+      .get("https://viny-record-api.vercel.app/auth/logout", { withCredentials: true })
       .then((response) => {
         if (response.data.Status) {
           localStorage.removeItem("valid");

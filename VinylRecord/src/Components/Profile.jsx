@@ -12,7 +12,7 @@ const Profile = () => {
 
   useEffect(() => {
     // Realizar la solicitud para obtener el perfil del administrador
-    axios.get("http://localhost:8080/auth/profile")
+    axios.get("https://viny-record-api.vercel.app/auth/profile")
       .then((res) => {
         if (res.data.profile) {
           setProfile(res.data.profile);

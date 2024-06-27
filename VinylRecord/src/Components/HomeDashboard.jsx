@@ -26,7 +26,7 @@ const HomeDashboard = () => {
 
   const fetchBandasRecords = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/auth/bandas_records");
+      const response = await axios.get("https://viny-record-api.vercel.app/auth/bandas_records");
       if (response.data.Status) {
         setBandas(response.data.Result);
       } else {
@@ -39,7 +39,7 @@ const HomeDashboard = () => {
 
   const bandasCount = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/auth/bandas_count");
+      const response = await axios.get("https://viny-record-api.vercel.app/auth/bandas_count");
       if (response.data.Status) {
         setBandasTotal(response.data.Result[0].bandas_total);
       }
@@ -50,7 +50,7 @@ const HomeDashboard = () => {
 
   const discosCount = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/auth/discos_count");
+      const response = await axios.get("https://viny-record-api.vercel.app/auth/discos_count");
       if (response.data.Status) {
         setDiscosTotal(response.data.Result[0].discos_total);
       }
@@ -61,7 +61,7 @@ const HomeDashboard = () => {
 
   const generoCount = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/auth/genero_count");
+      const response = await axios.get("https://viny-record-api.vercel.app/auth/genero_count");
       if (response.data.Status) {
         setGeneroTotal(response.data.Result[0].category_total);
       } else {

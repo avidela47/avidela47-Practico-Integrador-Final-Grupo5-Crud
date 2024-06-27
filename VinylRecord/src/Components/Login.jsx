@@ -14,7 +14,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8080/auth/adminlogin", values)
+      .post("https://viny-record-api.vercel.app/auth/adminlogin", values)
       .then((res) => {
         if (res.data.loginStatus) {
           localStorage.setItem("valid", true);

@@ -8,7 +8,7 @@ const AddCategory = () => {
   const handleSubmit = (e) => {
     e.preventDefault();    
     axios
-      .post("http://localhost:8080/auth/add_category", { category })
+      .post("https://viny-record-api.vercel.app/add_category", { category })
       .then((res) => {
         if(res.data.Status) {
           navigate("/dashboard/category");

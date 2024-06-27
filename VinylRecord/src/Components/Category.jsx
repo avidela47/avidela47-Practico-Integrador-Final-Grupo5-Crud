@@ -6,7 +6,7 @@ const Category = () => {
   const [category, setCategory] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:8080/auth/category")
+      .get("https://viny-record-api.vercel.app/auth/category")
       .then((res) => {
         if (res.data.Status) {
           setCategory(res.data.Result);

@@ -6,7 +6,7 @@ const Start = () => {
   const navigate = useNavigate();
   useEffect(() => {
     axios
-      .get("http://localhost:8080/verify")
+      .get("https://viny-record-api.vercel.app/verify")
       .then((response) => {
         if (response.data.Status) {
           if (response.data.role === "admin") {
