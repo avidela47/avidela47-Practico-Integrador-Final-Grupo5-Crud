@@ -241,3 +241,91 @@ body {
   margin: 50px;
   margin-bottom: 10px;
 }
+
+/* For tablets (portrait and landscape) */
+@media (max-width: 768px) {
+  .loginPage {
+      background-size: cover;
+      padding: 20px;
+  }
+
+  .card {
+      margin-left: 0;
+      margin-top: 20px;
+  }
+
+  .player {
+      width: 250px;
+      height: auto;
+  }
+
+  .player__controls {
+      flex-direction: column;
+  }
+
+  .player__album {
+      width: 100px;
+  }
+
+  .player__btn--small {
+      min-width: 40px;
+      min-height: 40px;
+  }
+
+  .player__btn--medium {
+      min-height: 60px;
+      min-width: 60px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .loginPage {
+      background-size: cover;
+      padding: 10px;
+  }
+
+  .card {
+      margin-left: 0;
+      margin-top: 10px;
+      margin-right: 10px;
+  }
+
+  .player {
+      width: 200px;
+      height: auto;
+  }
+
+  .player__controls {
+      flex-direction: column;
+      margin-bottom: 10px;
+  }
+
+  .player__album {
+      width: 80px;
+  }
+
+  .player__btn--small {
+      min-width: 30px;
+      min-height: 30px;
+  }
+
+  .player__btn--medium {
+      min-height: 50px;
+      min-width: 50px;
+  }
+
+  .card2 {
+      margin: 20px;
+      margin-top: 5px;
+  }
+
+  .btne {
+      margin-left: 0;
+  }
+
+  .colfoto {
+      margin: 20px;
+      margin-bottom: 5px;
+  }
+}
