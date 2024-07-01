@@ -243,6 +243,7 @@ body {
 }
 
 /* For tablets (portrait and landscape) */
+
 @media (max-width: 768px) {
   .loginPage {
       background-size: cover;
@@ -279,6 +280,7 @@ body {
 }
 
 /* For mobile devices */
+
 @media (max-width: 480px) {
   .loginPage {
       background-size: cover;
